@@ -18,7 +18,7 @@ public class Main {
 		char[] text = readFileToString(sourceText).toCharArray();
 		System.out.println(Arrays.toString(text));
 		List<Letter> letterStat = calculateLetterUse(text);
-		Collections.sort(letterStat, new LetterUseComparator());
+		Collections.sort(letterStat, new LetterUseComparator().reversed());
 		int totalLetters = getTotalUses(letterStat);
 		System.out.println(totalLetters);
 		printRelativeResult(letterStat, totalLetters);
